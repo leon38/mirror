@@ -1,0 +1,201 @@
+/*@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');*/
+
+:root {
+    --main-bg-color: #F0B271;
+}
+
+body, html {
+    height:100%;
+    background: url('assets/also-calm.png') no-repeat center;
+    background-size: cover;
+}
+
+#root {
+    font-family: "Reem Kufi", sans-serif;
+
+    color: #fff;
+    padding: 50px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.cell {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    text-align: center;
+}
+.rc-Calendar-header {
+    text-align: center;
+    font-weight: bolder;
+}
+.rc-Month {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 10px 10px;
+    font-size: 12px;
+}
+.rc-Month-header {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.rc-Month-weekdays-weekday {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    font-weight: bolder;
+    color: var(--main-bg-color);
+}
+.rc-Month--current .rc-Month-header {
+    font-size: 14px;
+    color: #fff;
+
+}
+.rc-Week {
+    height: 32px;
+}
+.rc-Week-number {
+    color: #777777;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+}
+.rc-Week-days {
+    display: inline-block;
+}
+.rc-Week:last-child .rc-Week-days {
+
+}
+.rc-Week--current {
+
+}
+.rc-Day {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 32px;
+    position: relative;
+}
+.rc-Day:hover {
+}
+.rc-Day--outside {
+    cursor: default;
+    color: transparent;
+}
+.rc-Day--outside:hover {
+    background-color: transparent;
+}
+.rc-Day--event {
+    background-color: #eeeeee;
+}
+.rc-Day--current {
+    background-color: var(--main-bg-color);
+    color: #fff;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.rc-Day--longEvent {
+    background-color: #5cb85c;
+}
+.rc-Day--warning {
+    background-color: #f0ad4e;
+}
+
+.container {
+    width:980px;
+    margin:0 auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+[class^=col-] {
+    display: block;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-md-4 {
+    width:33%;
+}
+
+.Today {
+    text-align: center;
+}
+
+span.today--day {
+    color: var(--main-bg-color);
+    font-size: 60px;
+    text-shadow: 2px 2px 3px rgba(75,75,75,0.8);
+    text-align: center;
+}
+
+.modal {
+    position: absolute;
+    left: 100px;
+    top: -150px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: var(--main-bg-color);
+    z-index: 1050;
+    opacity: 0;
+    padding: 10px;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+
+.modal.in {
+    opacity: 1;
+}
